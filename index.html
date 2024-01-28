@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scoreboard">
+      <h1>
+        <span>ROCK</span><br />
+        <span>PAPER</span><br />
+        <span>SCISSORS</span>
+      </h1>
+      <div class="view-score">
+        <div class="score">
+          <span>COMPUTER</span><br />
+          <span>SCORE</span><br />
+          <span id="pc-score">0</span>
+        </div>
+        <div class="score">
+          <span>YOUR</span><br />
+          <span>SCORE</span><br />
+          <span id="user-score">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="choices">
+      <img
+        class="choice stone"
+        src="../assets/fist.png"
+        alt="Stone"
+        onclick="play('stone')"
+      />
+      <img
+        class="choice scissors"
+        src="../assets/scissors.png"
+        alt="Scissors"
+        onclick="play('scissors')"
+      />
+      <img
+        class="choice paper"
+        src="../assets/hand.png"
+        alt="Paper"
+        onclick="play('paper')"
+      />
+    </div>
+    <div id="result"></div>
+    <button id="play-again" onclick="resetGame()">PLAY AGAIN</button>
+    <button id="rules-btn" onclick="toggleRules()">RULES</button>
+    <button id="next-btn" onclick="next()" style="display: none;">NEXT</button>
+    <div id="rules-container">
+      <div id="close-button" onclick="closeRulesContainer()">X</div>
+      <h2 style="color: white; padding-top: 8px; text-align: center;">Game Rules</h2>
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+        <li>If both players lay down the same hand, each player lays down another hand</li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

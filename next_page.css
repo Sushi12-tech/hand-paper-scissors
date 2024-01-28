@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  text-align: center;
+  background-color: #89c15e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#rules-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  border: 2px solid white;
+  width: 120px;
+  height: 40px;
+  background-color: #89c15e;
+  color: white;
+  font-size: 21px;
+  font-weight: 600;
+  cursor: pointer;
+}
+  #result {
+    color: white;
+    font-family: Roboto;
+    text-align: center;
+  }
+
+  .hurray {
+    font-size: 91px;
+    font-weight: 600;
+    line-height: 107px;
+    letter-spacing: 0.1em;
+    margin-top: 170px;
+  }
+
+  .you-won {
+    font-size: 41px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.1em;
+  }
+
+  #rules-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #004429;
+    border: 7px solid #ccc;
+    padding: 10px;
+    height: 325px;
+    width: 280px;
+    border-radius: 13px;
+    display: none;
+    color: white;
+  }
+  #rules-container ul {
+    padding-top: 10px;
+    list-style: square;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 13px;
+  }
+  
+  #rules-container ul li::marker{
+    color: #FFD600;
+    width: 8px;
+    height: 8px; 
+  }
+
+  #rules-container li{
+    margin-bottom: 15px;
+  }
+  #close-button {
+    font-family: 'Dangrek', sans-serif;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-color: #FF0000;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
