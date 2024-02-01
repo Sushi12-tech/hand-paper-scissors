@@ -15,7 +15,28 @@ body {
   height: 100vh;
   margin: 0;
 }
-
+.image-container {
+    position: relative;
+    margin-top: 100px;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cup {
+    width: 200px; 
+    height: 200px; 
+    z-index: 1; 
+    margin-top:10%;
+  } 
+  .star{
+    width: 500px;
+    height:297px;
+  }
+  
 #rules-btn {
   position: fixed;
   bottom: 20px;
@@ -43,7 +64,7 @@ body {
     font-weight: 600;
     line-height: 107px;
     letter-spacing: 0.1em;
-    margin-top: 170px;
+    margin-top: 250px;
   }
 
   .you-won {
@@ -100,4 +121,15 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+  }
+  .play-again-btn{
+    width: 174px;
+height: 44px;
+border-radius: 9px;
+border: none;
+color: #6B6B6B;
+font-weight: 600;
+letter-spacing: 0.1rem;
+margin-top: 50px;
+cursor: pointer;
   }

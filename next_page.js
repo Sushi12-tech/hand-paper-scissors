@@ -9,4 +9,6 @@ function toggleRules() {
   function closeRulesContainer() {
     document.getElementById("rules-container").style.display = "none";
   }
-  
+  function previous(){
+    window.location.href = "index.html";
+  }

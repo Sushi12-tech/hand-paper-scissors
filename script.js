@@ -13,11 +13,22 @@ function play(userChoice) {
     choice.style.display = "none";
   });
 
+  const allLines = document.querySelectorAll(".hr-line, .rt-line-1, .rt-line-2");
+  allLines.forEach(line => {
+    line.style.display = "none";
+  });
 
   const userImg = document.querySelector(`.choice.${userChoice}`);
+  userImg.style.display = "grid";
+  userImg.style.top = "50px";
+  userImg.style.left = "-300px";
+
+  
   const pcImg = document.querySelector(`.choice.${pcChoice}`);
-  userImg.style.display = "inline-block";
-  pcImg.style.display = "inline-block";
+  pcImg.style.display = "grid";
+  pcImg.style.top = "50px";
+  pcImg.style.left = "300px";
+  
 
   const resultDiv = document.getElementById("result");
   resultDiv.innerHTML = ""; 
@@ -34,27 +45,9 @@ function play(userChoice) {
   }
 
   function resetGame() {
-    // Show all choices
-    const allChoices = document.querySelectorAll(".choice");
-    allChoices.forEach(choice => {
-      choice.style.display = "inline";
-    });
-  
-    // Clear the result
-    const resultDiv = document.getElementById("result");
-    resultDiv.innerHTML = "";
-  
-    // Hide the "Play Again" button
-    const playAgainButton = document.getElementById("play-again");
-    playAgainButton.style.display = "none";
-
-    //Hide the "Next" button
-    const nextButton = document.getElementById("next-btn");
-    nextButton.style.display = "none";
-
-    const rulesButton = document.getElementById("rules-btn");
-    rulesButton.style.right = "20px";
-  }  
+    // Reload the page
+    window.location.reload();
+  }
   
 
 function getResult(userChoice, pcChoice) {
@@ -134,3 +127,12 @@ function updateButtonPositions(outcome) {
 function next() {
   window.location.href = "next_page.html";
 }
+
+// Wait for the DOM content to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Select the rules container element
+  const rulesContainer = document.querySelector('.rules-container');
+
+  // Add the "open" class to the rules container to display it by default
+  rulesContainer.classList.add('open');
+});

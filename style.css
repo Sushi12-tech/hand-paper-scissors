@@ -58,29 +58,16 @@ body {
     font-weight: 700;
   }
   .choices {
-    margin-top: 20px;
+    margin-top: 100px;
+    position: relative;
   }
-  .choice{
-    cursor: pointer;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background-color: white;
-  }
+  
   img{
     align-items: center;
   }
-  .stone{
-    border: 16px solid #0074B6;
-  }
-  .scissors{
-    border: 16px solid #BD00FF;
-  }
-  .paper{
-    border: 16px solid #FFA943;
-  }
+
   #result {
-    margin-top: 20px;
+    margin-top: -80px;
   }
   #play-again{
     cursor: pointer;
@@ -137,7 +124,7 @@ body {
     height: 325px;
     width: 280px;
     border-radius: 13px;
-    display: none;
+    display: block;
     color: white;
   }
   #rules-container ul {
@@ -197,3 +184,102 @@ body {
 .result-line2 {
   font-size: 25px;
 }
+/* ----------------------------------------------------------------------- */
+
+
+.first{
+  margin-left: 40%;
+  display: flex;
+  flex-direction: row;
+}
+.circle-container {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 16px solid; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: white ;
+}
+.img-fist,
+.img-scissors,
+.img-hand {
+  max-width: 100%; 
+  max-height: 100%;
+  object-fit: contain; 
+}
+
+.hr-line {
+  margin: 0px 43px;
+  top: 50%;
+  transform: rotate(90deg); 
+  width: 12px;
+  height: 6.5rem;
+  background-color: #000000A3;
+}
+.rt-line-1{
+  margin-top: -32px;
+  margin-left: 112px;
+  transform: rotate(140deg);
+  width: 12px;
+  height: 7rem;
+  background-color: #000000A3;
+}
+.rt-line-2{
+  margin-top: -27px;
+  margin-left: 93px;
+  transform: rotate(40deg);
+  width: 12px;
+  height: 7rem;
+  background-color: #000000A3;
+}
+.second{
+  margin-left: 40%;
+  display: flex;
+  flex-direction: row;
+}
+.third{
+  margin-top: -28px;
+  margin-left: 48%;
+}
+.stone{
+  border-color: #0074B6;
+}
+.scissors{
+  border-color: #BD00FF;
+}
+.paper{
+  border-color: #FFA943;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+#result-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#result-container .choice-container {
+  flex: 1;
+  text-align: center;
+}
+
+#result-container .choice-container img {
+  width: 100px; 
+  height: 100px; 
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+

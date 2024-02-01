@@ -27,37 +27,63 @@
       </div>
     </div>
     <div class="choices">
-      <img
-        class="choice stone"
-        src="../assets/fist.png"
-        alt="Stone"
-        onclick="play('stone')"
-      />
-      <img
-        class="choice scissors"
-        src="../assets/scissors.png"
-        alt="Scissors"
-        onclick="play('scissors')"
-      />
-      <img
-        class="choice paper"
-        src="../assets/hand.png"
-        alt="Paper"
-        onclick="play('paper')"
-      />
+      <div class="first">
+        <div class="circle-container stone choice">
+          <img
+            src="assets/fist.png"
+            alt="Rock"
+            class="img-fist"
+            onclick="play('stone')"
+          />
+        </div>
+        <div class="hr-line"></div>
+        <div class="circle-container scissors choice">
+          <img
+            src="assets/scissors.png"
+            alt="Scissors"
+            class="img-scissors"
+            onclick="play('scissors')"
+          />
+        </div>
+      </div>
+      <div class="second">
+        <div class="rt-line-1"></div>
+        <div class="rt-line-2"></div>
+      </div>
+      <div class="third">
+        <div class="circle-container paper choice">
+          <img
+            src="assets/hand.png"
+            alt="Paper"
+            class="img-hand"
+            onclick="play('paper')"
+          />
+        </div>
+      </div>
     </div>
     <div id="result"></div>
     <button id="play-again" onclick="resetGame()">PLAY AGAIN</button>
     <button id="rules-btn" onclick="toggleRules()">RULES</button>
-    <button id="next-btn" onclick="next()" style="display: none;">NEXT</button>
+    <button id="next-btn" onclick="next()" style="display: none">NEXT</button>
     <div id="rules-container">
       <div id="close-button" onclick="closeRulesContainer()">X</div>
-      <h2 style="color: white; padding-top: 8px; text-align: center;">Game Rules</h2>
+      <h2 style="color: white; padding-top: 8px; text-align: center">
+        Game Rules
+      </h2>
       <ul>
         <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
-        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
-        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
-        <li>If both players lay down the same hand, each player lays down another hand</li>
+        <li>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
       </ul>
     </div>
     <script src="script.js"></script>
